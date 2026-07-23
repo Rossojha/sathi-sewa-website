@@ -1,0 +1,24 @@
+{
+  "menus": [
+    {
+      "menuTitle": "Home",
+      "menuLink": "/index.html"
+    },
+    {
+      "menuTitle": "Services",
+      "menuLink": "/services.html"
+    },
+    {
+      "menuTitle": "About",
+      "menuLink": "/about.html"
+    },
+    {
+      "menuTitle": "Contact",
+      "menuLink": "/contact.html"
+    },
+    {
+      "menuTitle": "Get a Quote",
+      "menuLink": "https://wa.me/61452566357?text=Hi%20Sathi%20Sewa%20Services%2C%20I%27d%20like%20a%20free%20quote."
+    }
+  ]
+}

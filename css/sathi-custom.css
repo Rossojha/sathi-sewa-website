@@ -1,0 +1,239 @@
+/* =====================================================
+   Sathi Sewa Services — custom brand overrides
+   Loaded AFTER color.css / style.css so these rules win.
+   Brand colors:
+     Navy:   #0B2A4A  (dark backgrounds, header bar, footer)
+     Green:  #2E7D32  (accent, buttons, icons, highlights)
+     Gold:   #F5A623  (small accent touches, matches logo sun)
+   ===================================================== */
+
+/* Swap the template's default near-black sections for brand navy */
+header.smaller,
+#section-welcome,
+section#section-welcome,
+.bg-dark-navy {
+  background: #0b2a4a !important;
+}
+
+/* Footer in navy with a subtle top border for separation */
+footer {
+  background: #0b2a4a;
+  border-top: 3px solid #2e7d32;
+}
+footer,
+footer a {
+  color: #cfe3d8;
+}
+footer a:hover {
+  color: #ffffff;
+}
+
+/* Top info bar (address/phone/hours) in a slightly deeper navy */
+header .info {
+  background: #08213a;
+}
+
+
+
+/* ---------- Buttons ---------- */
+.btn-solid,
+a.btn-solid {
+  background-color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+  transition: all 0.25s ease;
+}
+.btn-solid:hover,
+a.btn-solid:hover {
+  background-color: #256427 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(46, 125, 50, 0.35);
+}
+
+.btn-navy,
+a.btn-navy {
+  background-color: #0b2a4a !important;
+  border-color: #0b2a4a !important;
+  color: #fff !important;
+  transition: all 0.25s ease;
+}
+.btn-navy:hover,
+a.btn-navy:hover {
+  background-color: #123a63 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(11, 42, 74, 0.35);
+}
+
+/* ---------- Service / feature cards ---------- */
+.service-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 40px 25px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(11, 42, 74, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 34px rgba(11, 42, 74, 0.16);
+}
+.service-card .service-icon {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #eaf5ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+.service-card:hover .service-icon {
+  background: #2e7d32;
+}
+.service-card .service-icon i {
+  font-size: 32px;
+  color: #2e7d32;
+  transition: color 0.3s ease;
+}
+.service-card:hover .service-icon i {
+  color: #fff;
+}
+.service-card h3 {
+  margin-bottom: 12px;
+  color: #0b2a4a;
+}
+
+/* ---------- Trust badges row ---------- */
+.trust-badge {
+  text-align: center;
+  padding: 20px 10px;
+}
+.trust-badge i {
+  font-size: 34px;
+  color: #2e7d32;
+  margin-bottom: 12px;
+  display: inline-block;
+}
+
+/* ---------- Floating WhatsApp button ---------- */
+#whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation: wa-pulse 2.4s infinite;
+  transition: transform 0.2s ease;
+}
+#whatsapp-float:hover {
+  transform: scale(1.08);
+}
+#whatsapp-float i {
+  color: #fff;
+  font-size: 32px;
+}
+@keyframes wa-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+@media (max-width: 767px) {
+  #whatsapp-float {
+    bottom: 18px;
+    right: 18px;
+    width: 54px;
+    height: 54px;
+  }
+  #whatsapp-float i {
+    font-size: 26px;
+  }
+}
+
+/* ---------- Contact page quick-contact buttons ---------- */
+.quick-contact-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+.quick-contact-row .btn-solid,
+.quick-contact-row .btn-navy {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 50px;
+  color: #fff !important;
+}
+
+/* ---------- Simple fade/slide utility (used with wow.js classes already in template) ---------- */
+.hero-sub {
+  letter-spacing: 0.5px;
+}
+.tp-bgimg {
+  filter: brightness(0.15) !important;
+}
+
+/* Fix uneven service card row alignment */
+#section-services .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+#section-services .row > [class*="col-"] {
+  display: flex;
+}
+#section-services .row > [class*="col-"] .service-card {
+  width: 100%;
+}
+
+.page-menu #subheader,
+.page-about #subheader {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: scroll !important;
+}
+
+#section-services {
+  background-color: #151b1f3c; /* pick any color you like */
+}
+
+.page-menu #subheader,
+.page-about #subheader,
+.page-contact #subheader {
+  background-size: cover !important;
+  background-position: center center !important;
+  background-attachment: scroll !important;
+}
+@media (max-width: 776px) {
+  #section-about .col-md-4 {
+    margin-bottom: 50px;
+  }
+}
+#section-services {
+  padding-top: 0px;
+}
+@media (max-width: 767px) {
+  header div#logo {
+    height: auto;
+    overflow: visible;
+  }
+  header div#logo img.logo {
+    max-height: 90px;
+    width: auto;
+  }
+}
