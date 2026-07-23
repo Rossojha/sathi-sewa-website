@@ -186,7 +186,7 @@ a.btn-navy:hover {
   letter-spacing: 0.5px;
 }
 .tp-bgimg {
-  filter: brightness(0.15) !important;
+  filter: brightness(0.4) !important;
 }
 
 /* Fix uneven service card row alignment */
