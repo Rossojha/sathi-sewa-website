@@ -185,6 +185,34 @@ a.btn-navy:hover {
 .hero-sub {
   letter-spacing: 0.5px;
 }
+
+/* ---------- Mobile hero fixes ---------- */
+@media (max-width: 992px) {
+  header.header-mobile {
+    background: transparent !important;
+  }
+  header.header-mobile.smaller {
+    background: #0b2a4a !important;
+  }
+  header.header-mobile #mainmenu {
+    background: rgba(11, 42, 74, 0.97) !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-trust {
+    margin-top: 18px;
+  }
+
+  #revolution-slider .tp-caption.very-big-white,
+  #revolution-slider .tp-caption.hero-sub,
+  #revolution-slider .tp-caption.hero-cta,
+  #revolution-slider .tp-caption.hero-badge-caption {
+    transform: translateY(-70px) !important; /*move all buttons and texts up and down bigger up smaller low */
+  }
+}
+
+
 .tp-bgimg {
   filter: brightness(0.3) !important;
 }
@@ -260,11 +288,30 @@ a.btn-navy:hover {
 
 .very-big-white,
 h1.big {
-  letter-spacing: 16px; /* was 20px, this is the ~20% reduction */
-}
-
-.very-big-white,
-h1.big {
   letter-spacing: 16px;
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 767px) {
+  .hero-trust {
+    margin-top: 18px;
+    display: inline-flex; /* keep as is, just adding the margin */
+  }
+}
+
+@media (max-width: 992px) {
+  header.header-mobile {
+    background: transparent !important;
+  }
+  /* keep the dropdown itself readable when the hamburger menu is opened */
+  header.header-mobile #mainmenu {
+    background: rgba(11, 42, 74, 0.97) !important;
+  }
+  header,
+header.fixed,
+header.header-mobile {
+  position: fixed !important;
+  top: 0 !important;
+  height: auto !important;
+}
 }
