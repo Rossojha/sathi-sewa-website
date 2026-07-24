@@ -186,7 +186,7 @@ a.btn-navy:hover {
   letter-spacing: 0.5px;
 }
 .tp-bgimg {
-  filter: brightness(0.4) !important;
+  filter: brightness(0.3) !important;
 }
 
 /* Fix uneven service card row alignment */
@@ -236,4 +236,35 @@ a.btn-navy:hover {
     max-height: 90px;
     width: auto;
   }
+}
+.hero-trust {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 100px;
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+.hero-trust .stars {
+  color: #f5a623;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+
+.very-big-white,
+h1.big {
+  letter-spacing: 16px; /* was 20px, this is the ~20% reduction */
+}
+
+.very-big-white,
+h1.big {
+  letter-spacing: 16px;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
