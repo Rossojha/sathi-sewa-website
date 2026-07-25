@@ -186,31 +186,7 @@ a.btn-navy:hover {
   letter-spacing: 0.5px;
 }
 
-/* ---------- Mobile hero fixes ---------- */
-@media (max-width: 992px) {
-  header.header-mobile {
-    background: transparent !important;
-  }
-  header.header-mobile.smaller {
-    background: #0b2a4a !important;
-  }
-  header.header-mobile #mainmenu {
-    background: rgba(11, 42, 74, 0.97) !important;
-  }
-}
 
-@media (max-width: 767px) {
-  .hero-trust {
-    margin-top: 18px;
-  }
-
-  #revolution-slider .tp-caption.very-big-white,
-  #revolution-slider .tp-caption.hero-sub,
-  #revolution-slider .tp-caption.hero-cta,
-  #revolution-slider .tp-caption.hero-badge-caption {
-    transform: translateY(-70px) !important; /*move all buttons and texts up and down bigger up smaller low */
-  }
-}
 
 
 .tp-bgimg {
@@ -292,26 +268,90 @@ h1.big {
   text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
 }
 
-@media (max-width: 767px) {
-  .hero-trust {
-    margin-top: 18px;
-    display: inline-flex; /* keep as is, just adding the margin */
-  }
-}
+
 
 @media (max-width: 992px) {
   header.header-mobile {
     background: transparent !important;
   }
-  /* keep the dropdown itself readable when the hamburger menu is opened */
-  header.header-mobile #mainmenu {
-    background: rgba(11, 42, 74, 0.97) !important;
+  header.header-mobile.smaller {
+    background: #0b2a4a !important;
   }
   header,
-header.fixed,
-header.header-mobile {
-  position: fixed !important;
-  top: 0 !important;
-  height: auto !important;
+  header.fixed,
+  header.header-mobile {
+    position: fixed !important;
+    top: 0 !important;
+    height: auto !important;
+  }
+  header.header-mobile #mainmenu,
+  header.header-mobile #mainmenu li {
+    background: #0b2a4a !important;
+    opacity: 1 !important;
+  }
 }
+/* ---------- Mobile dropdown menu: full-width tappable rows ---------- */
+@media only screen and (max-width: 992px) {
+  #mainmenu {
+    background: #0b2a4a;
+    padding: 6px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  #mainmenu li {
+    width: 100%;
+    float: none;
+    display: block;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+  #mainmenu li:last-child {
+    border-bottom: none !important;
+  }
+  #mainmenu a {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 24px !important;
+    text-align: left;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #fff;
+    transition: background 0.2s ease, padding-left 0.25s ease;
+  }
+  #mainmenu a:hover,
+  #mainmenu a:active,
+  #mainmenu a:focus {
+    background: rgba(46, 125, 50, 0.28) !important;
+    padding-left: 32px !important;
+  }
+  #mainmenu li a:after,
+  #mainmenu li:last-child a:after {
+    content: "\f105";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    color: #f5a623;
+    margin: 0;
+    float: none;
+    display: inline-block !important;
+  }
+  #mainmenu li:last-child a {
+    background: #2e7d32;
+    color: #fff;
+  }
+  #mainmenu li:last-child a:hover {
+    background: #256427 !important;
+    padding-left: 24px !important;
+  }
+}
+@media (max-width: 767px) {
+  .hero-trust {
+    margin-top: 18px;
+  }
+  #revolution-slider .tp-caption.very-big-white,
+  #revolution-slider .tp-caption.hero-sub,
+  #revolution-slider .tp-caption.hero-cta,
+  #revolution-slider .tp-caption.hero-badge-caption {
+    transform: translateY(-120px) !important;
+  }
 }
