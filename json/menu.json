@@ -2,19 +2,19 @@
   "menus": [
     {
       "menuTitle": "Home",
-      "menuLink": "/index.html"
+      "menuLink": "index.html"
     },
     {
       "menuTitle": "Services",
-      "menuLink": "/services.html"
+      "menuLink": "services.html"
     },
     {
       "menuTitle": "About",
-      "menuLink": "/about.html"
+      "menuLink": "about.html"
     },
     {
       "menuTitle": "Contact",
-      "menuLink": "/contact.html"
+      "menuLink": "contact.html"
     },
     {
       "menuTitle": "Get a Quote",
