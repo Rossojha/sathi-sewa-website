@@ -364,10 +364,7 @@ new WOW().init();
 			vscroll = 0;
 		 }
 		 
-		$.stellar({
-			horizontalScrolling: false,
-			verticalOffset: 0
-		});
+		
     });
 	
 	
