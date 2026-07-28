@@ -720,7 +720,13 @@ new WOW().init();
 			mobile_menu_show = 0;			
 		}
 	})
-	
+	// fix: reset mobile menu state when page is restored from mobile browser back/forward cache
+	window.addEventListener('pageshow', function(event) {
+		if (event.persisted) {
+			jQuery('#mainmenu').removeAttr('style').hide();
+			mobile_menu_show = 0;
+		}
+	});
 // one page navigation
 	      /**
          * This part causes smooth scrolling using scrollto.js
