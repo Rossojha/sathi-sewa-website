@@ -716,16 +716,7 @@ window.onresize = function(event) {
 	
 	
 	
-	jQuery('#menu-btn').on("click", function() {
-		if(mobile_menu_show==0){
-			jQuery('header').css('height','auto');
-			jQuery('#mainmenu').slideDown();
-			mobile_menu_show = 1;
-		}else{
-			jQuery('#mainmenu').slideUp();
-			mobile_menu_show = 0;			
-		}
-	})
+	
 	// fix: reset mobile menu state when page is restored from mobile browser back/forward cache
 	window.addEventListener('pageshow', function(event) {
 		if (event.persisted) {

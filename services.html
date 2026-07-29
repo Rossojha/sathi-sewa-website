@@ -319,7 +319,7 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/enquire.min.js"></script>
     <script src="js/jquery.stellar.min.js"></script>
-<script src="js/designesia.js?v=2"></script>
+<script src="js/designesia.js?v=3"></script>
     <script src="demo/demo.js"></script>
     <script src="js/menu.js"></script>
 
@@ -340,6 +340,30 @@
   setTimeout(function () {
     jQuery('#preloader').fadeOut(500);
   }, 3000);
+</script>
+<script>
+(function(){
+  function initMobileMenu(){
+    var btn = document.getElementById('menu-btn');
+    var menu = document.getElementById('mainmenu');
+    if (!btn || !menu) return;
+    if (btn.dataset.menuBound === '1') return; // don't bind twice
+    btn.dataset.menuBound = '1';
+
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      var isOpen = window.getComputedStyle(menu).display !== 'none';
+      menu.style.display = isOpen ? 'none' : 'block';
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMobileMenu);
+  } else {
+    initMobileMenu();
+  }
+})();
 </script>
 </body>
 </html>
