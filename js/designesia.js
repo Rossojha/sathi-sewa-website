@@ -368,7 +368,11 @@ new WOW().init();
     });
 	
 	
-	function init_resize(){
+	var enquireRegistered = false; // NEW: guard so enquire only registers once
+
+function init_resize(){
+if (!enquireRegistered) {
+	enquireRegistered = true;
 	enquire.register("screen and (min-width: 993px)", {
 		match : function() {
 			jQuery('#mainmenu').show();
@@ -389,20 +393,22 @@ new WOW().init();
 			$('header').removeClass("header-mobile");
 		}
 		});
-		
-		init();
-		init_de();
-		video_autosize();
-		jQuery('#gallery').isotope('reLayout');
-		
-		$('header').removeClass('smaller');
-		$('header').removeClass('logo-smaller');
-		$('header').removeClass('clone');
-	};
+}
 	
-	window.onresize = function(event) {
-		init_resize();
-	};	
+	init();
+	video_autosize();
+	jQuery('#gallery').isotope('reLayout');
+	
+	$('header').removeClass('smaller');
+	$('header').removeClass('logo-smaller');
+	$('header').removeClass('clone');
+};
+
+var resizeTimer; // NEW: debounce so mobile scroll doesn't spam this function
+window.onresize = function(event) {
+	clearTimeout(resizeTimer);
+	resizeTimer = setTimeout(init_resize, 200);
+};
 	
 
 	function init() {
